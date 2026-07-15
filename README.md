@@ -5,7 +5,7 @@ A public, accessible roadmap for the Vaccination Service at
 It shows what we are working on across vaccination services in Wales, and where
 we are heading.
 
-**Live site:** https://fireballxlV.github.io/DHCW-Vaccines-Roadmap/
+**Live site:** https://dhcw-digital-health-and-care-wales.github.io/DHCW-Vaccines-Roadmap/
 
 > **Draft for discussion.** This roadmap shows direction and priorities, not
 > firm commitments. It carries no dates. Now is the firmest; Later is the most
@@ -41,7 +41,7 @@ roadmap, and Next and Later are not commitments to deliver by a particular time.
 ## Giving feedback
 
 This is built in the open and feedback is welcome. Please
-[open a roadmap feedback issue](https://github.com/fireballxlV/DHCW-Vaccines-Roadmap/issues/new?template=roadmap-feedback.md).
+[open a roadmap feedback issue](https://github.com/DHCW-Digital-Health-and-Care-Wales/DHCW-Vaccines-Roadmap/issues/new?template=roadmap-feedback.md).
 
 ## How often it is updated
 

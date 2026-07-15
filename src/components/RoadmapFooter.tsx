@@ -2,7 +2,7 @@ import logoImage from '../assets/dhcw-logo.png';
 import { useLanguage } from '../lib/i18n';
 
 const REPO_URL =
-  'https://github.com/fireballxlV/DHCW-Vaccines-Roadmap';
+  'https://github.com/DHCW-Digital-Health-and-Care-Wales/DHCW-Vaccines-Roadmap';
 const FEEDBACK_URL = `${REPO_URL}/issues/new?template=roadmap-feedback.md`;
 
 /**
