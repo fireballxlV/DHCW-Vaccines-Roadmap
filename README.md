@@ -1,11 +1,11 @@
-# Primary, Community and Mental Health: our roadmap
+# Vaccination Digital Service: our roadmap
 
-A public, accessible roadmap for the Primary, Community and Mental Health (PCMH)
-Directorate at [Digital Health and Care Wales (DHCW)](https://dhcw.nhs.wales/).
-It shows what we are working on across primary, community and mental health care
-in Wales, and where we are heading.
+A public, accessible roadmap for the Vaccination Service at
+[Digital Health and Care Wales (DHCW)](https://dhcw.nhs.wales/).
+It shows what we are working on across vaccination services in Wales, and where
+we are heading.
 
-**Live site:** https://dhcw-digital-health-and-care-wales.github.io/PCMH-Roadmap/
+**Live site:** https://fireballxlv.github.io/DHCW-Vaccines-Roadmap/
 
 > **Draft for discussion.** This roadmap shows direction and priorities, not
 > firm commitments. It carries no dates. Now is the firmest; Later is the most
@@ -13,17 +13,23 @@ in Wales, and where we are heading.
 
 ## Who it is for
 
-Anyone with an interest in digital primary, community and mental health care in
-Wales: the people who use these services, the teams who deliver them, partners
-and suppliers.
+Anyone with an interest in digital vaccination services in Wales: the people who
+use these services, the teams who deliver them, partners and suppliers.
+
+## Context for this service
+
+Our vision is every vaccination given in Wales to be recorded once, used
+wherever it is needed, and to help protect the people who need protecting most.
+
+We help Wales to deliver efficient, data-driven vaccination services by
+providing a near real-time, user-centred immunisation service that streamlines
+data management, enhances citizen access, and supports informed decision-making.
 
 ## How it is structured
 
 The roadmap has two axes:
 
-- **Six outcome categories** (the themes): Access and Inclusion; Workforce and
-  Capability; Digital Economy and Sustainability; Safety and Resilience; Data
-  and Collaboration; Equity and Innovation.
+- **Service category**: Vaccination Digital Service.
 - **Three horizons** within each category:
   - **Now** is work we are actively doing. It is well understood and underway.
   - **Next** is what we expect to pick up. It is direction, and it may change.
@@ -35,7 +41,7 @@ roadmap, and Next and Later are not commitments to deliver by a particular time.
 ## Giving feedback
 
 This is built in the open and feedback is welcome. Please
-[open a roadmap feedback issue](https://github.com/DHCW-Digital-Health-and-Care-Wales/PCMH-Roadmap/issues/new?template=roadmap-feedback.md).
+[open a roadmap feedback issue](https://github.com/fireballxlV/DHCW-Vaccines-Roadmap/issues/new?template=roadmap-feedback.md).
 
 ## How often it is updated
 
@@ -82,9 +88,7 @@ npm run format   # format with Prettier
 
 The site deploys to GitHub Pages from `main` via the workflow in
 [`.github/workflows/deploy.yml`](./.github/workflows/deploy.yml). The Vite base
-path is relative (`./`) so assets resolve whether Pages serves the site from the
-root of a private `*.pages.github.io` subdomain (while the repo is private) or
-from `/PCMH-Roadmap/` as a public project page.
+path is set for this project page deployment route (`/DHCW-Vaccines-Roadmap/`).
 
 > **Repository setting required:** in **Settings -> Pages**, set the source to
 > **GitHub Actions** for deployments to run.

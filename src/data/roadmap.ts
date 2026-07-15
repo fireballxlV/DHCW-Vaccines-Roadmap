@@ -17,7 +17,7 @@ export interface Localised {
 }
 
 export interface Category {
-  id: string; // slug, e.g. 'access-inclusion'
+  id: string; // slug
   name: Localised; // formal theme name
   headline: Localised; // warm, outcome-led headline
   description: Localised;
@@ -31,18 +31,18 @@ export interface RoadmapItem {
   categoryId: string;
   horizon: Horizon;
   status: ItemStatus;
-  services?: string[]; // e.g. ['WIS', 'Choose Pharmacy', 'CYPrIS']
+  services?: string[];
   updated: string; // ISO date, e.g. '2026-06-26'
 }
 
 export interface RoadmapMeta {
   title: Localised;
   intro: Localised;
-  horizonNote: Localised; // the forward-looking note
+  horizonNote: Localised;
   owner: string;
   lastUpdated: string; // ISO date
-  reviewNote: Localised; // how often we update it
-  statusLabel: string; // 'Draft for Discussion'
+  reviewNote: Localised;
+  statusLabel: string;
 }
 
 export interface Roadmap {
@@ -60,19 +60,18 @@ export const roadmap: Roadmap = {
   meta: {
     title: {
       cy: TODO_CY,
-      en: 'Primary, Community and Mental Health: our roadmap',
+      en: 'Vaccination Digital Service: our roadmap',
     },
     intro: {
       cy: TODO_CY,
-      en: 'This roadmap shows what we are working on across primary, community and mental health care in Wales, and where we are heading. We have grouped our work under six outcomes that matter to the people we serve.',
+      en: "Our vision is every vaccination given in Wales to be recorded once, used wherever it is needed, and to help protect the people who need protecting most. We help Wales to deliver efficient, data-driven vaccination services by providing a near real-time, user-centred immunisation service that streamlines data management, enhances citizen access, and supports informed decision-making.",
     },
     horizonNote: {
       cy: TODO_CY,
       en: 'Now is what we are actively working on. Next is what we expect to pick up. Later is the direction we are setting. The further out the work, the more it may change as we learn. We do not put dates on this roadmap, and Next and Later are not commitments to deliver by a particular time.',
     },
-    owner:
-      'Primary, Community and Mental Health Directorate, Digital Health and Care Wales',
-    lastUpdated: '2026-06-26',
+    owner: 'Vaccination Service, Digital Health and Care Wales',
+    lastUpdated: '2026-07-15',
     reviewNote: {
       cy: TODO_CY,
       en: 'We update this roadmap regularly as our plans develop.',
@@ -80,7 +79,6 @@ export const roadmap: Roadmap = {
     statusLabel: 'Draft for Discussion',
   },
 
-  // Horizon definitions from docs/BUILD_BRIEF.md Section 1.
   horizons: [
     {
       id: 'now',
@@ -108,168 +106,356 @@ export const roadmap: Roadmap = {
     },
   ],
 
-  // The six outcome categories. Descriptions are used verbatim from
-  // docs/BUILD_BRIEF.md Section 6. Each category has a distinct accent so the
-  // themes are visually separable, but meaning never relies on colour alone.
   categories: [
     {
-      id: 'access-inclusion',
-      name: { cy: TODO_CY, en: 'Access and Inclusion' },
-      headline: { cy: TODO_CY, en: "When you need it, it's there." },
-      description: {
-        cy: TODO_CY,
-        en: "When you need care, whether that's from your GP, a pharmacy, a community service or mental health support, reaching it should be quick and simple. This theme covers the everyday ways you get to primary and community care and how we're making them easier, so you spend less time waiting and chasing. It also gives the teams who care for you time back from admin to focus on care. Going digital should never shut anyone out. If getting online is hard for you, or not something you want, you'll still be able to reach the care you need. As more services move online, we're making sure the people who face the biggest barriers get the most support.",
-      },
-      accent: '#325083',
-    },
-    {
-      id: 'workforce-capability',
-      name: { cy: TODO_CY, en: 'Workforce and Capability' },
+      id: 'vaccination-digital-service',
+      name: { cy: TODO_CY, en: 'Vaccination Digital Service' },
       headline: {
         cy: TODO_CY,
-        en: 'People who care for you, supported to do it well.',
+        en: 'Recorded once, used wherever it is needed.',
       },
       description: {
         cy: TODO_CY,
-        en: "The people who care for you should have digital tools they're confident using. This theme is about making sure staff across primary and community care, including mental health, are well-supported to get the best from the systems they rely on every day. It's also about the jobs we create. We're growing skilled digital careers here in Wales, in engineering, product, design and data, so that public money builds lasting capability and good jobs at home.",
-      },
-      accent: '#12A3C9',
-    },
-    {
-      id: 'digital-economy-sustainability',
-      name: { cy: TODO_CY, en: 'Digital Economy and Sustainability' },
-      headline: { cy: TODO_CY, en: 'Public money, lasting value.' },
-      description: {
-        cy: TODO_CY,
-        en: "Public money goes furthest when services are built around the people who use them. This theme is about spending well on digital services across primary and community care, including mental health, and designing them so they make a real difference. That means starting from real user needs and proving new ideas work before we scale them. It also means building on open standards so we're never locked into a single supplier, growing teams and skills that stay in Wales, and making sure every pound spent reaches frontline care.",
+        en: "This roadmap shows what we are working on in the Vaccination Service at Digital Health and Care Wales. We look after systems that record vaccinations, support community delivery, and hold linked information that helps protect people across Wales.",
       },
       accent: '#005AA8',
     },
-    {
-      id: 'safety-resilience',
-      name: { cy: TODO_CY, en: 'Safety and Resilience' },
-      headline: { cy: TODO_CY, en: 'Foundations you can count on.' },
-      description: {
-        cy: TODO_CY,
-        en: "When you use a digital service for your care, it needs to be there and working. This theme is about the systems and connections that keep primary, community and mental health services running day to day. We're making them safer and more resilient, so services stay reliable and recover quickly when something does go wrong. Dependable foundations also let services run in real time and support new ways of caring for you.",
-      },
-      accent: '#1B294A',
-    },
-    {
-      id: 'data-collaboration',
-      name: { cy: TODO_CY, en: 'Data and Collaboration' },
-      headline: { cy: TODO_CY, en: 'Your information, working for your care.' },
-      description: {
-        cy: TODO_CY,
-        en: "Your care is safer when the people looking after you can see the right information at the right time. This theme is about joining up information across primary and community care, including mental health, so you don't have to repeat your story and nothing important gets missed. Used responsibly, the same information helps us understand where need is greatest and plan services around it. We look after your information carefully and are open about how it's used, sharing it only where it helps your care.",
-      },
-      accent: '#4C6272',
-    },
-    {
-      id: 'equity-innovation',
-      name: { cy: TODO_CY, en: 'Equity and Innovation' },
-      headline: { cy: TODO_CY, en: 'Innovation that reaches everyone.' },
-      description: {
-        cy: TODO_CY,
-        en: 'New ideas in digital health should reach the people who need them most, not just those who find technology easy. This is about making sure that as we develop and scale new approaches across primary, community and mental health care, we do it in a way that reduces health inequalities rather than deepening them. Faster adoption of innovation across Wales only counts as success when it works for everyone.',
-      },
-      accent: '#C9941A',
-    },
   ],
 
-  // Placeholder items, one per category, spread across the three horizons, so
-  // the layout renders populated. Each English title is prefixed with
-  // [Example] to mark it for replacement (docs/BUILD_BRIEF.md Section 5).
   items: [
     {
-      id: 'access-inclusion-example',
+      id: 'now-menb-response-in-schools',
       title: {
         cy: TODO_CY,
-        en: '[Example] Making it easier to find and reach the right care',
+        en: 'Getting ready for the MenB response in schools',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Reducing the time people spend searching and waiting by making routes into primary and community care simpler to find and use.',
+        en: 'Updating the Welsh Immunisation System so nurses can record MenB vaccinations in schools using the same system they already use for flu and HPV.',
       },
-      categoryId: 'access-inclusion',
+      categoryId: 'vaccination-digital-service',
       horizon: 'now',
       status: 'in-progress',
-      updated: '2026-06-26',
+      services: ['WIS'],
+      updated: '2026-07-15',
     },
     {
-      id: 'workforce-capability-example',
+      id: 'now-digital-consent-testing',
       title: {
         cy: TODO_CY,
-        en: '[Example] Growing digital product, design and engineering careers in Wales',
+        en: 'Testing digital consent with families',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Building lasting digital skills and good jobs at home so public investment strengthens capability within Wales.',
+        en: 'Trying a new online consent journey for school vaccinations with real families, including support for appropriate self-consent by young people.',
       },
-      categoryId: 'workforce-capability',
+      categoryId: 'vaccination-digital-service',
       horizon: 'now',
       status: 'in-progress',
-      updated: '2026-06-26',
+      updated: '2026-07-15',
     },
     {
-      id: 'safety-resilience-example',
+      id: 'now-learning-school-nurse-needs',
       title: {
         cy: TODO_CY,
-        en: '[Example] Moving core services onto resilient cloud foundations',
+        en: 'Learning what school nurses need',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Making the systems behind everyday care safer and quicker to recover when something goes wrong.',
+        en: 'Working directly with school nurses, testing early designs, and iterating before significant build work starts.',
       },
-      categoryId: 'safety-resilience',
+      categoryId: 'vaccination-digital-service',
       horizon: 'now',
-      status: 'exploring',
-      updated: '2026-06-26',
+      status: 'in-progress',
+      updated: '2026-07-15',
     },
     {
-      id: 'digital-economy-sustainability-example',
+      id: 'now-building-next-two-updates',
       title: {
         cy: TODO_CY,
-        en: '[Example] Building our services on open standards and open code by default',
+        en: 'Building the next two updates',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Avoiding lock-in to a single supplier and making sure more of every pound spent reaches frontline care.',
+        en: 'Finalising and building the next two system releases based on user requests.',
       },
-      categoryId: 'digital-economy-sustainability',
+      categoryId: 'vaccination-digital-service',
+      horizon: 'now',
+      status: 'in-progress',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'now-getting-ready-for-winter',
+      title: {
+        cy: TODO_CY,
+        en: 'Getting ready for winter',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Agreeing required system changes for flu, COVID and RSV programmes with Public Health Wales and all seven health boards.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'now',
+      status: 'in-progress',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'now-migrating-database-stack',
+      title: {
+        cy: TODO_CY,
+        en: 'Migrating the database stack',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Moving the vaccination records platform to a new database stack, completing code changes and entering regression testing before live migration.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'now',
+      status: 'in-progress',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'now-replacing-older-servers',
+      title: {
+        cy: TODO_CY,
+        en: 'Replacing older servers',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Replacing unsupported servers to keep the service stable and secure without disrupting users.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'now',
+      status: 'in-progress',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'next-menb-goes-live',
+      title: {
+        cy: TODO_CY,
+        en: 'MenB goes live',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'School teams begin recording MenB vaccinations in live sessions, with direct support to resolve early issues quickly.',
+      },
+      categoryId: 'vaccination-digital-service',
       horizon: 'next',
       status: 'exploring',
-      updated: '2026-06-26',
+      services: ['WIS'],
+      updated: '2026-07-15',
     },
     {
-      id: 'data-collaboration-example',
+      id: 'next-small-number-of-schools-live',
       title: {
         cy: TODO_CY,
-        en: '[Example] Joining up information across primary and community care',
+        en: 'A small number of schools try the new system',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Helping the people who look after you see the right information at the right time, so nothing important gets missed.',
+        en: 'Moving from prototype testing to live use in a small number of schools and iterating based on weekly learning.',
       },
-      categoryId: 'data-collaboration',
-      horizon: 'later',
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
       status: 'exploring',
-      updated: '2026-06-26',
+      updated: '2026-07-15',
     },
     {
-      id: 'equity-innovation-example',
+      id: 'next-second-update-and-training',
       title: {
         cy: TODO_CY,
-        en: '[Example] Testing new approaches first with the communities who face the biggest barriers',
+        en: 'The second update goes out with training',
       },
       summary: {
         cy: TODO_CY,
-        en: 'Designing and scaling innovation in a way that narrows health inequalities rather than widening them.',
+        en: 'Providing nurse training ahead of winter so teams are confident with system changes before peak delivery.',
       },
-      categoryId: 'equity-innovation',
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'next-first-real-training-pilot-site',
+      title: {
+        cy: TODO_CY,
+        en: 'First real training at a pilot site',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Running initial end-to-end training for school nurses and using the findings to shape wider rollout.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'next-more-families-try-digital-consent',
+      title: {
+        cy: TODO_CY,
+        en: 'More families try digital consent',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Extending digital consent trials to more families and schools to build stronger evidence of what works.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'next-refreshing-the-storage',
+      title: {
+        cy: TODO_CY,
+        en: 'Refreshing the storage',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Refreshing service storage components behind the scenes to maintain performance and resilience.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'next-planning-following-release',
+      title: {
+        cy: TODO_CY,
+        en: 'Planning the following release',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Creating space to plan the next release properly so priority changes are not rushed.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'next',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-winter-vaccinations-across-wales',
+      title: {
+        cy: TODO_CY,
+        en: 'Winter vaccinations across Wales',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Supporting flu, COVID and RSV vaccination delivery across all seven health boards during the busiest period of the year.',
+      },
+      categoryId: 'vaccination-digital-service',
       horizon: 'later',
       status: 'exploring',
-      updated: '2026-06-26',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-school-vaccinations-main-system',
+      title: {
+        cy: TODO_CY,
+        en: 'School vaccinations become part of the main system',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Bringing school vaccinations into the same platform as adult and childhood programmes with one person record and one way of working.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      services: ['WIS'],
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-cypris-continues-to-join-up',
+      title: {
+        cy: TODO_CY,
+        en: "Children's health system continues to join up",
+      },
+      summary: {
+        cy: TODO_CY,
+        en: "Continuing to connect CYPrIS with the Welsh Immunisation System so each child in Wales has one clear digital vaccination and health record.",
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      services: ['CYPrIS', 'WIS'],
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-wider-training-school-nurses',
+      title: {
+        cy: TODO_CY,
+        en: 'Wider training for school nurses',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Expanding school nurse training across Wales using the pilot learning model.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-pre-school-vaccinations',
+      title: {
+        cy: TODO_CY,
+        en: 'Pre-school vaccinations',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Working with clinical and policy colleagues to agree how pre-school vaccination delivery should be represented in the service.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-connecting-nhs-wales-app',
+      title: {
+        cy: TODO_CY,
+        en: 'Connecting with the NHS Wales App',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Starting work on how citizens can view their vaccination records and history through the NHS Wales App.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-preparing-full-cloud-move',
+      title: {
+        cy: TODO_CY,
+        en: 'Getting ready for the full move to the cloud',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Preparing the target environment and service foundations for full migration to cloud hosting.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      updated: '2026-07-15',
+    },
+    {
+      id: 'later-digital-consent-keeps-growing',
+      title: {
+        cy: TODO_CY,
+        en: 'Digital consent keeps growing',
+      },
+      summary: {
+        cy: TODO_CY,
+        en: 'Continuing to test and improve digital consent until evidence supports moving to the next stage.',
+      },
+      categoryId: 'vaccination-digital-service',
+      horizon: 'later',
+      status: 'exploring',
+      updated: '2026-07-15',
     },
   ],
 };

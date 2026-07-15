@@ -12,7 +12,7 @@ import { useLanguage } from './lib/i18n';
 /**
  * The roadmap page. All content is read from src/data/roadmap.ts; nothing is
  * hard-coded here. Layout follows the Figma Make design, reconciled to the
- * brief's Now/Next/Later structure across six outcome categories.
+ * brief's Now/Next/Later structure across roadmap categories.
  */
 export default function App() {
   const { lang } = useLanguage();
@@ -34,7 +34,7 @@ export default function App() {
         <div id="roadmap" className="scroll-mt-28 bg-surface px-4 py-8 sm:px-6">
           <div className="mx-auto max-w-content">
             <h2 className="sr-only">
-              {cy ? 'Y trywydd yn ôl canlyniad' : 'The roadmap by outcome'}
+              {cy ? 'Y trywydd yn ôl canlyniad' : 'The roadmap by category'}
             </h2>
             {roadmap.categories.map((category) => (
               <CategorySection
